@@ -1,4 +1,9 @@
-const myTodos = ["Write the letters", "Eat some lunch", "Run around the city"]
+const myTodos = []
+
+const addTodos = () => {
+  const todo = prompt("Add your task!")
+  myTodos.push(todo)
+}
 
 const showTodos = todos => {
   for (index = 0; index < todos.length; index++) {
@@ -7,5 +12,7 @@ const showTodos = todos => {
     console.log(`[${index + 1}] ${item}`)
   }
 }
+
+addTodos()
 
 showTodos(myTodos)
