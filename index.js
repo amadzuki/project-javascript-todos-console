@@ -32,9 +32,10 @@ class todo {
   }
 }
 
+// function to add todo
 const addTodo = (newTask, newTags, newFavorite, newCompleted) => {
   const lastID = myTodos
-    .map(task => task.id)
+    .map(todo => todo.id)
     .reduce((max, currentValue) => Math.max(max, currentValue))
   const newTodo = new todo(
     lastID + 1,
@@ -46,6 +47,7 @@ const addTodo = (newTask, newTags, newFavorite, newCompleted) => {
   myTodos.push(newTodo)
 }
 
+// function to view todo
 const showTodos = todos => {
   for (index = 0; index < todos.length; index++) {
     const item = todos[index].task
@@ -59,6 +61,7 @@ const showTodos = todos => {
   }
 }
 
+// function to search todo including certain text
 const searchTodo = (todos, textToSearch) => {
   const foundTodos = []
 
@@ -76,6 +79,6 @@ const searchTodo = (todos, textToSearch) => {
 
 // addTodo()
 
-showTodos(myTodos)
+// searchTodo(myTodos, "the")
 
-searchTodo(myTodos, "the")
+showTodos(myTodos)
