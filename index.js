@@ -23,10 +23,10 @@ const myTodos = [
 ]
 // todo object constructor
 class todo {
-  constructor(id, task, tags, favorite, completed) {
+  constructor(id, task, [...tags], favorite, completed) {
     this.id = id
     this.task = task
-    this.tags = tags
+    this.tags = [...tags]
     this.favorite = favorite
     this.completed = completed
   }
