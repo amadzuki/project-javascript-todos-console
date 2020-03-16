@@ -1,4 +1,25 @@
-const myTodos = ["Write the letter", "Eat some lunch", "Run around the city"]
+const myTodos = [
+  {
+    id: 1,
+    task: "Write the letter",
+    tags : ['important']
+    favorite: true,
+    completed: true
+  },
+  {
+    id: 2,
+    task: "Eat lunch",
+    tags: ['health']
+    favorite: false,
+    completed: true
+  },
+  {
+    id: 3,
+    task: "Run around the City",
+    tags: ['health']
+    favorite: true,
+    completed: false
+  },]
 
 const addTodo = () => {
   const todo = prompt("Add your task!")
