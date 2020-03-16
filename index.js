@@ -49,8 +49,13 @@ const addTodo = (newTask, newTags, newFavorite, newCompleted) => {
 const showTodos = todos => {
   for (index = 0; index < todos.length; index++) {
     const item = todos[index].task
-
-    console.log(`[${index + 1}] ${item}`)
+    const completed = () => {
+      return todos[index].completed ? `☑` : `□`
+    }
+    const favorite = () => {
+      return todos[index].favorite ? `★` : ``
+    }
+    console.log(`${completed()} ${item} ${favorite()}`)
   }
 }
 
