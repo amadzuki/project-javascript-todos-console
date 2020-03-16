@@ -43,13 +43,12 @@ const addTodo = (newTask, newTags, newFavorite, newCompleted) => {
     newFavorite,
     newCompleted
   )
-  todo.task = prompt("Add your task!")
-  myTodos.push(todo)
+  myTodos.push(newTodo)
 }
 
 const showTodos = todos => {
   for (index = 0; index < todos.length; index++) {
-    const item = todos[index]
+    const item = todos[index].task
 
     console.log(`[${index + 1}] ${item}`)
   }
@@ -59,7 +58,7 @@ const searchTodo = (todos, textToSearch) => {
   const foundTodos = []
 
   for (index = 0; index < todos.length; index++) {
-    const lowerCaseItem = todos[index].toLowerCase()
+    const lowerCaseItem = todos[index].task.toLowerCase()
     const lowerCaseText = textToSearch.toLowerCase()
 
     if (lowerCaseItem.includes(lowerCaseText)) {
@@ -70,7 +69,7 @@ const searchTodo = (todos, textToSearch) => {
   console.log(foundTodos)
 }
 
-addTodo()
+// addTodo()
 
 showTodos(myTodos)
 
